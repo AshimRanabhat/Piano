@@ -3,7 +3,14 @@ import './piano.css';
 
 function PianoKey(props) {
   return (
-    <button type="button" className={props.keyType} name={props.name}></button>
+    <button
+      type="button"
+      className={props.keyType}
+      onPointerDown={props.startNote}
+      onPointerUp={props.endNote}
+      onPointerLeave={props.endNote}
+      name={props.name}
+    ></button>
   );
 }
 
@@ -44,7 +51,12 @@ function getKeys(keysRepresentation, props) {
 
     return (
       <div className="key-wrapper" key={currentKey}>
-        <PianoKey keyType={keyType} name={currentKey}></PianoKey>
+        <PianoKey
+          keyType={keyType}
+          name={currentKey}
+          startNote={props.startNote}
+          endNote={props.endNote}
+        ></PianoKey>
       </div>
     );
   });
