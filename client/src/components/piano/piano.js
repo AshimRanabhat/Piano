@@ -1,4 +1,5 @@
 import React from 'react';
+import './piano.css';
 
 function PianoKey(props) {
   return (
