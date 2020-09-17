@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+body {
+  background: linear-gradient(#f5f7fa, #c3cfe2);
+  display: flex;
+  flex-direction: column;
+}
